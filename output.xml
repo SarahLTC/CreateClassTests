@@ -1,0 +1,1613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.8.5 on win32)" generated="20210512 13:57:20.968" rpa="false" schemaversion="2">
+<suite id="s1" name="Create Class Tests" source="C:\Users\ringo\Desktop\OUHK\CreateClassTest\create_class_tests">
+<suite id="s1-s1" name="invalid createClass" source="C:\Users\ringo\Desktop\OUHK\CreateClassTest\create_class_tests\invalid_createClass.robot">
+<kw name="Open Browser To Create Class Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210512 13:57:21.130" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/createClass.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:21.130" endtime="20210512 13:57:22.815"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210512 13:57:22.815" endtime="20210512 13:57:22.933"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210512 13:57:22.933" endtime="20210512 13:57:22.934"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:22.937" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:22.934" endtime="20210512 13:57:22.937"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:22.934" endtime="20210512 13:57:22.937"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:21.130" endtime="20210512 13:57:22.937"/>
+</kw>
+<test id="s1-s1-t1" name="Empty Title">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:22.938" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:22.938" endtime="20210512 13:57:23.253"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:23.256" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.254" endtime="20210512 13:57:23.256"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.253" endtime="20210512 13:57:23.256"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:22.938" endtime="20210512 13:57:23.256"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${VALID DESCRIPTION}</arg>
+<arg>${VALID DIFFICULTY}</arg>
+<arg>${VALID LANGUAGE}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.258" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.257" endtime="20210512 13:57:23.300"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.257" endtime="20210512 13:57:23.300"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.301" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.301" endtime="20210512 13:57:23.350"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.301" endtime="20210512 13:57:23.350"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:23.350" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:23.350" endtime="20210512 13:57:23.389"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.350" endtime="20210512 13:57:23.389"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:23.390" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:23.389" endtime="20210512 13:57:23.429"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.389" endtime="20210512 13:57:23.429"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.430" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.429" endtime="20210512 13:57:23.473"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.429" endtime="20210512 13:57:23.473"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:23.476" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.473" endtime="20210512 13:57:23.476"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:23.478" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.476" endtime="20210512 13:57:23.478"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.473" endtime="20210512 13:57:23.479"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.256" endtime="20210512 13:57:23.479"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:22.937" endtime="20210512 13:57:23.479"/>
+</test>
+<test id="s1-s1-t2" name="Empty Description">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:23.480" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:23.480" endtime="20210512 13:57:23.493"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:23.495" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.493" endtime="20210512 13:57:23.495"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.493" endtime="20210512 13:57:23.495"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.480" endtime="20210512 13:57:23.495"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${VALID TITLE}</arg>
+<arg>${EMPTY}</arg>
+<arg>${VALID DIFFICULTY}</arg>
+<arg>${VALID LANGUAGE}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.497" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.497" endtime="20210512 13:57:23.547"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.496" endtime="20210512 13:57:23.547"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.548" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.548" endtime="20210512 13:57:23.586"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.548" endtime="20210512 13:57:23.586"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:23.587" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:23.587" endtime="20210512 13:57:23.623"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.586" endtime="20210512 13:57:23.623"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:23.624" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:23.623" endtime="20210512 13:57:23.661"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.623" endtime="20210512 13:57:23.661"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.662" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.661" endtime="20210512 13:57:23.696"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.661" endtime="20210512 13:57:23.696"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:23.698" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.697" endtime="20210512 13:57:23.699"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:23.701" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.699" endtime="20210512 13:57:23.701"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.696" endtime="20210512 13:57:23.701"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.495" endtime="20210512 13:57:23.701"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.480" endtime="20210512 13:57:23.701"/>
+</test>
+<test id="s1-s1-t3" name="Empty Difficulty">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:23.702" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:23.702" endtime="20210512 13:57:23.715"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:23.717" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.715" endtime="20210512 13:57:23.717"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.715" endtime="20210512 13:57:23.717"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.702" endtime="20210512 13:57:23.717"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${VALID TITLE}</arg>
+<arg>${VALID DESCRIPTION}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${VALID LANGUAGE}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.719" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.718" endtime="20210512 13:57:23.770"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.718" endtime="20210512 13:57:23.770"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.771" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.770" endtime="20210512 13:57:23.816"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.770" endtime="20210512 13:57:23.816"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:23.816" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:23.816" endtime="20210512 13:57:23.837"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.816" endtime="20210512 13:57:23.837"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:23.838" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:23.838" endtime="20210512 13:57:23.876"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.837" endtime="20210512 13:57:23.876"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.877" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.876" endtime="20210512 13:57:23.919"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.876" endtime="20210512 13:57:23.919"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:23.921" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.919" endtime="20210512 13:57:23.922"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:23.925" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.922" endtime="20210512 13:57:23.925"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.919" endtime="20210512 13:57:23.925"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.718" endtime="20210512 13:57:23.925"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.702" endtime="20210512 13:57:23.926"/>
+</test>
+<test id="s1-s1-t4" name="Empty Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:23.928" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:23.927" endtime="20210512 13:57:23.940"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:23.943" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.941" endtime="20210512 13:57:23.943"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.940" endtime="20210512 13:57:23.943"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.927" endtime="20210512 13:57:23.943"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${VALID TITLE}</arg>
+<arg>${VALID DESCRIPTION}</arg>
+<arg>${VALID DIFFICULTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.944" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.944" endtime="20210512 13:57:23.991"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.944" endtime="20210512 13:57:23.992"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:23.992" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:23.992" endtime="20210512 13:57:24.037"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.992" endtime="20210512 13:57:24.037"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.037" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:24.037" endtime="20210512 13:57:24.074"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.037" endtime="20210512 13:57:24.074"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.075" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:24.074" endtime="20210512 13:57:24.095"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.074" endtime="20210512 13:57:24.095"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.096" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.095" endtime="20210512 13:57:24.130"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.095" endtime="20210512 13:57:24.130"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:24.133" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.130" endtime="20210512 13:57:24.133"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.134" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.133" endtime="20210512 13:57:24.134"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.130" endtime="20210512 13:57:24.135"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.943" endtime="20210512 13:57:24.135"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:23.927" endtime="20210512 13:57:24.135"/>
+</test>
+<test id="s1-s1-t5" name="Empty Title And Description">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:24.136" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:24.136" endtime="20210512 13:57:24.148"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.150" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.148" endtime="20210512 13:57:24.150"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.148" endtime="20210512 13:57:24.150"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.136" endtime="20210512 13:57:24.150"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>${VALID DIFFICULTY}</arg>
+<arg>${VALID LANGUAGE}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.152" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.152" endtime="20210512 13:57:24.193"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.152" endtime="20210512 13:57:24.193"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.194" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.194" endtime="20210512 13:57:24.229"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.193" endtime="20210512 13:57:24.230"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.230" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:24.230" endtime="20210512 13:57:24.267"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.230" endtime="20210512 13:57:24.268"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.268" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:24.268" endtime="20210512 13:57:24.304"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.268" endtime="20210512 13:57:24.304"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.305" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.305" endtime="20210512 13:57:24.340"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.304" endtime="20210512 13:57:24.340"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:24.343" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.340" endtime="20210512 13:57:24.343"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.345" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.343" endtime="20210512 13:57:24.345"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.340" endtime="20210512 13:57:24.345"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.151" endtime="20210512 13:57:24.345"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.136" endtime="20210512 13:57:24.346"/>
+</test>
+<test id="s1-s1-t6" name="Empty Title And Difficulty">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:24.347" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:24.347" endtime="20210512 13:57:24.359"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.361" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.359" endtime="20210512 13:57:24.361"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.359" endtime="20210512 13:57:24.361"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.347" endtime="20210512 13:57:24.361"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${VALID DESCRIPTION}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${VALID LANGUAGE}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.363" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.363" endtime="20210512 13:57:24.401"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.363" endtime="20210512 13:57:24.401"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.402" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.402" endtime="20210512 13:57:24.451"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.401" endtime="20210512 13:57:24.451"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.451" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:24.451" endtime="20210512 13:57:24.472"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.451" endtime="20210512 13:57:24.473"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.473" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:24.473" endtime="20210512 13:57:24.511"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.473" endtime="20210512 13:57:24.511"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.512" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.512" endtime="20210512 13:57:24.547"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.512" endtime="20210512 13:57:24.547"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:24.549" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.547" endtime="20210512 13:57:24.549"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.551" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.549" endtime="20210512 13:57:24.551"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.547" endtime="20210512 13:57:24.551"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.362" endtime="20210512 13:57:24.551"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.346" endtime="20210512 13:57:24.551"/>
+</test>
+<test id="s1-s1-t7" name="Empty Title And Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:24.553" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:24.552" endtime="20210512 13:57:24.564"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.566" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.564" endtime="20210512 13:57:24.566"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.564" endtime="20210512 13:57:24.566"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.552" endtime="20210512 13:57:24.566"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${VALID DESCRIPTION}</arg>
+<arg>${VALID DIFFICULTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.568" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.568" endtime="20210512 13:57:24.609"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.567" endtime="20210512 13:57:24.609"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.610" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.610" endtime="20210512 13:57:24.653"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.609" endtime="20210512 13:57:24.653"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.654" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:24.654" endtime="20210512 13:57:24.690"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.653" endtime="20210512 13:57:24.690"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.691" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:24.691" endtime="20210512 13:57:24.712"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.691" endtime="20210512 13:57:24.712"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.712" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.712" endtime="20210512 13:57:24.748"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.712" endtime="20210512 13:57:24.748"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:24.751" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.749" endtime="20210512 13:57:24.751"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.753" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.751" endtime="20210512 13:57:24.753"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.748" endtime="20210512 13:57:24.753"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.567" endtime="20210512 13:57:24.753"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.552" endtime="20210512 13:57:24.754"/>
+</test>
+<test id="s1-s1-t8" name="Empty Description And Difficulty">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:24.755" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:24.754" endtime="20210512 13:57:24.767"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.769" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.767" endtime="20210512 13:57:24.769"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.767" endtime="20210512 13:57:24.769"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.754" endtime="20210512 13:57:24.769"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${VALID TITLE}</arg>
+<arg>${EMPTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${VALID LANGUAGE}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.771" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.770" endtime="20210512 13:57:24.818"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.770" endtime="20210512 13:57:24.818"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.819" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.819" endtime="20210512 13:57:24.856"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.818" endtime="20210512 13:57:24.856"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.857" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:24.857" endtime="20210512 13:57:24.879"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.856" endtime="20210512 13:57:24.879"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:24.879" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:24.879" endtime="20210512 13:57:24.916"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.879" endtime="20210512 13:57:24.916"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.916" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.916" endtime="20210512 13:57:24.950"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.916" endtime="20210512 13:57:24.950"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:24.953" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.951" endtime="20210512 13:57:24.953"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.955" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.953" endtime="20210512 13:57:24.955"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.950" endtime="20210512 13:57:24.955"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.769" endtime="20210512 13:57:24.955"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.754" endtime="20210512 13:57:24.955"/>
+</test>
+<test id="s1-s1-t9" name="Empty Description And Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:24.956" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:24.956" endtime="20210512 13:57:24.968"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:24.970" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.968" endtime="20210512 13:57:24.970"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.968" endtime="20210512 13:57:24.971"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.956" endtime="20210512 13:57:24.971"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${VALID TITLE}</arg>
+<arg>${EMPTY}</arg>
+<arg>${VALID DIFFICULTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:24.972" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:24.972" endtime="20210512 13:57:25.021"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.972" endtime="20210512 13:57:25.021"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.022" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.021" endtime="20210512 13:57:25.059"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.021" endtime="20210512 13:57:25.059"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.060" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:25.060" endtime="20210512 13:57:25.095"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.059" endtime="20210512 13:57:25.095"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.096" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:25.096" endtime="20210512 13:57:25.117"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.095" endtime="20210512 13:57:25.117"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.117" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.117" endtime="20210512 13:57:25.151"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.117" endtime="20210512 13:57:25.151"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:25.154" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.151" endtime="20210512 13:57:25.154"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.155" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.154" endtime="20210512 13:57:25.155"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.151" endtime="20210512 13:57:25.155"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.971" endtime="20210512 13:57:25.156"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:24.956" endtime="20210512 13:57:25.156"/>
+</test>
+<test id="s1-s1-t10" name="Empty Difficulty And Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:25.158" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:25.158" endtime="20210512 13:57:25.170"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.172" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.170" endtime="20210512 13:57:25.172"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.170" endtime="20210512 13:57:25.172"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.158" endtime="20210512 13:57:25.172"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${VALID TITLE}</arg>
+<arg>${VALID DESCRIPTION}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.173" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.173" endtime="20210512 13:57:25.221"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.173" endtime="20210512 13:57:25.221"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.222" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.222" endtime="20210512 13:57:25.268"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.222" endtime="20210512 13:57:25.268"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.269" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:25.269" endtime="20210512 13:57:25.291"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.268" endtime="20210512 13:57:25.291"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.292" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:25.291" endtime="20210512 13:57:25.312"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.291" endtime="20210512 13:57:25.312"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.313" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.312" endtime="20210512 13:57:25.348"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.312" endtime="20210512 13:57:25.348"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:25.350" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.348" endtime="20210512 13:57:25.350"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.352" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.350" endtime="20210512 13:57:25.352"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.348" endtime="20210512 13:57:25.352"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.172" endtime="20210512 13:57:25.352"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.157" endtime="20210512 13:57:25.353"/>
+</test>
+<test id="s1-s1-t11" name="Empty Title And Description And Difficulty">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:25.355" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:25.354" endtime="20210512 13:57:25.367"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.369" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.367" endtime="20210512 13:57:25.369"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.367" endtime="20210512 13:57:25.369"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.354" endtime="20210512 13:57:25.369"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${VALID LANGUAGE}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.371" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.370" endtime="20210512 13:57:25.410"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.370" endtime="20210512 13:57:25.410"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.411" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.410" endtime="20210512 13:57:25.449"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.410" endtime="20210512 13:57:25.449"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.449" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:25.449" endtime="20210512 13:57:25.471"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.449" endtime="20210512 13:57:25.471"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.472" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:25.471" endtime="20210512 13:57:25.510"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.471" endtime="20210512 13:57:25.511"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.511" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.511" endtime="20210512 13:57:25.554"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.511" endtime="20210512 13:57:25.554"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:25.557" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.554" endtime="20210512 13:57:25.557"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.560" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.557" endtime="20210512 13:57:25.560"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.554" endtime="20210512 13:57:25.560"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.369" endtime="20210512 13:57:25.560"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.354" endtime="20210512 13:57:25.561"/>
+</test>
+<test id="s1-s1-t12" name="Empty Title And Description And Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:25.563" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:25.563" endtime="20210512 13:57:25.577"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.579" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.577" endtime="20210512 13:57:25.579"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.577" endtime="20210512 13:57:25.579"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.563" endtime="20210512 13:57:25.579"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>${VALID DIFFICULTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.581" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.581" endtime="20210512 13:57:25.620"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.581" endtime="20210512 13:57:25.620"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.621" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.621" endtime="20210512 13:57:25.659"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.620" endtime="20210512 13:57:25.659"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.660" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:25.659" endtime="20210512 13:57:25.697"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.659" endtime="20210512 13:57:25.697"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.698" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:25.698" endtime="20210512 13:57:25.719"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.697" endtime="20210512 13:57:25.719"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.720" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.719" endtime="20210512 13:57:25.755"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.719" endtime="20210512 13:57:25.756"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:25.759" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.756" endtime="20210512 13:57:25.759"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.761" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.759" endtime="20210512 13:57:25.761"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.756" endtime="20210512 13:57:25.761"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.580" endtime="20210512 13:57:25.761"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.562" endtime="20210512 13:57:25.762"/>
+</test>
+<test id="s1-s1-t13" name="Empty Title And Difficulty And Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:25.764" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:25.763" endtime="20210512 13:57:25.785"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.788" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.786" endtime="20210512 13:57:25.788"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.785" endtime="20210512 13:57:25.788"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.763" endtime="20210512 13:57:25.788"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${VALID DESCRIPTION}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.790" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.789" endtime="20210512 13:57:25.831"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.789" endtime="20210512 13:57:25.831"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.832" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.832" endtime="20210512 13:57:25.879"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.832" endtime="20210512 13:57:25.879"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.879" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:25.879" endtime="20210512 13:57:25.900"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.879" endtime="20210512 13:57:25.900"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:25.901" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:25.901" endtime="20210512 13:57:25.921"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.901" endtime="20210512 13:57:25.921"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.922" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.922" endtime="20210512 13:57:25.970"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.922" endtime="20210512 13:57:25.970"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:25.974" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.971" endtime="20210512 13:57:25.974"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.978" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.974" endtime="20210512 13:57:25.978"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.970" endtime="20210512 13:57:25.978"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.788" endtime="20210512 13:57:25.978"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.763" endtime="20210512 13:57:25.979"/>
+</test>
+<test id="s1-s1-t14" name="Empty Description And Difficulty And Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:25.981" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:25.981" endtime="20210512 13:57:25.994"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:25.997" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.995" endtime="20210512 13:57:25.997"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.995" endtime="20210512 13:57:25.997"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.980" endtime="20210512 13:57:25.997"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${VALID TITLE}</arg>
+<arg>${EMPTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:25.999" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:25.998" endtime="20210512 13:57:26.045"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.998" endtime="20210512 13:57:26.046"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:26.046" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.046" endtime="20210512 13:57:26.083"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.046" endtime="20210512 13:57:26.083"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:26.084" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:26.084" endtime="20210512 13:57:26.106"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.084" endtime="20210512 13:57:26.106"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:26.107" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:26.107" endtime="20210512 13:57:26.127"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.106" endtime="20210512 13:57:26.128"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:26.128" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.128" endtime="20210512 13:57:26.171"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.128" endtime="20210512 13:57:26.171"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:26.173" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.171" endtime="20210512 13:57:26.173"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:26.177" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.173" endtime="20210512 13:57:26.177"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.171" endtime="20210512 13:57:26.177"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.997" endtime="20210512 13:57:26.178"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:25.980" endtime="20210512 13:57:26.178"/>
+</test>
+<test id="s1-s1-t15" name="Empty Title And Description And Difficulty And Language">
+<kw name="Go To Create Class Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210512 13:57:26.180" level="INFO">Opening url 'http://localhost:7272/createClass.html'</msg>
+<status status="PASS" starttime="20210512 13:57:26.180" endtime="20210512 13:57:26.193"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:26.196" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.193" endtime="20210512 13:57:26.196"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.193" endtime="20210512 13:57:26.196"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.180" endtime="20210512 13:57:26.197"/>
+</kw>
+<kw name="Create Class With Empty Fields Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>${INVALID INDEX}</arg>
+<arg>${INVALID INDEX}</arg>
+<kw name="Input Title" library="resource">
+<arg>${title}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:26.199" level="INFO">Typing text '' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.198" endtime="20210512 13:57:26.238"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.198" endtime="20210512 13:57:26.238"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>${description}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:26.239" level="INFO">Typing text '' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.238" endtime="20210512 13:57:26.277"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.238" endtime="20210512 13:57:26.278"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>${difficulty}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:26.278" level="INFO">Selecting options from selection list 'difficulty_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:26.278" endtime="20210512 13:57:26.303"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.278" endtime="20210512 13:57:26.303"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>${language}</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:26.304" level="INFO">Selecting options from selection list 'language_field' by index 0.</msg>
+<status status="PASS" starttime="20210512 13:57:26.303" endtime="20210512 13:57:26.324"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.303" endtime="20210512 13:57:26.324"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:26.325" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.325" endtime="20210512 13:57:26.369"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.324" endtime="20210512 13:57:26.369"/>
+</kw>
+<kw name="Create Class Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:26.372" level="INFO">Current location is 'http://localhost:7272/classCreationError.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.369" endtime="20210512 13:57:26.372"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Error Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:26.374" level="INFO">Page title is 'Error Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:26.372" endtime="20210512 13:57:26.374"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.369" endtime="20210512 13:57:26.374"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.197" endtime="20210512 13:57:26.374"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:26.179" endtime="20210512 13:57:26.374"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210512 13:57:26.378" endtime="20210512 13:57:28.478"/>
+</kw>
+<doc>A test suite containing tests related to invalid class creation.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="PASS" starttime="20210512 13:57:20.990" endtime="20210512 13:57:28.478"/>
+</suite>
+<suite id="s1-s2" name="valid createClass" source="C:\Users\ringo\Desktop\OUHK\CreateClassTest\create_class_tests\valid_createClass.robot">
+<test id="s1-s2-t1" name="Valid Class Creation">
+<kw name="Open Browser To Create Class Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${CREATE CLASS URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210512 13:57:28.486" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/createClass.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:28.486" endtime="20210512 13:57:29.839"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210512 13:57:29.839" endtime="20210512 13:57:29.960"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210512 13:57:29.960" endtime="20210512 13:57:29.960"/>
+</kw>
+<kw name="Create Class Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Create class</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:29.963" level="INFO">Page title is 'Create class'.</msg>
+<status status="PASS" starttime="20210512 13:57:29.960" endtime="20210512 13:57:29.963"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:29.960" endtime="20210512 13:57:29.963"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:28.486" endtime="20210512 13:57:29.963"/>
+</kw>
+<kw name="Input Title" library="resource">
+<arg>Class A</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>title_field</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:29.964" level="INFO">Typing text 'Class A' into text field 'title_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:29.964" endtime="20210512 13:57:30.020"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:29.964" endtime="20210512 13:57:30.020"/>
+</kw>
+<kw name="Input Description" library="resource">
+<arg>A class</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>description_field</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:30.021" level="INFO">Typing text 'A class' into text field 'description_field'.</msg>
+<status status="PASS" starttime="20210512 13:57:30.020" endtime="20210512 13:57:30.068"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:30.020" endtime="20210512 13:57:30.068"/>
+</kw>
+<kw name="Input Difficulty" library="resource">
+<arg>1</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>difficulty_field</arg>
+<arg>${difficulty}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:30.069" level="INFO">Selecting options from selection list 'difficulty_field' by index 1.</msg>
+<status status="PASS" starttime="20210512 13:57:30.069" endtime="20210512 13:57:30.109"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:30.069" endtime="20210512 13:57:30.110"/>
+</kw>
+<kw name="Input Language" library="resource">
+<arg>2</arg>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>language_field</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20210512 13:57:30.111" level="INFO">Selecting options from selection list 'language_field' by index 2.</msg>
+<status status="PASS" starttime="20210512 13:57:30.111" endtime="20210512 13:57:30.149"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:30.110" endtime="20210512 13:57:30.149"/>
+</kw>
+<kw name="Submit Class" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 13:57:30.150" level="INFO">Clicking button 'submit_button'.</msg>
+<status status="PASS" starttime="20210512 13:57:30.150" endtime="20210512 13:57:30.518"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:30.149" endtime="20210512 13:57:30.518"/>
+</kw>
+<kw name="Result Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${RESULT URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210512 13:57:30.521" level="INFO">Current location is 'http://localhost:7272/classCreated.html'.</msg>
+<status status="PASS" starttime="20210512 13:57:30.519" endtime="20210512 13:57:30.521"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Result Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210512 13:57:30.523" level="INFO">Page title is 'Result Page'.</msg>
+<status status="PASS" starttime="20210512 13:57:30.521" endtime="20210512 13:57:30.523"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:30.518" endtime="20210512 13:57:30.523"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210512 13:57:30.524" endtime="20210512 13:57:32.615"/>
+</kw>
+<status status="PASS" starttime="20210512 13:57:28.485" endtime="20210512 13:57:32.615"/>
+</test>
+<doc>A test suite with a single test for valid class creation.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20210512 13:57:28.481" endtime="20210512 13:57:32.616"/>
+</suite>
+<status status="PASS" starttime="20210512 13:57:20.969" endtime="20210512 13:57:32.618"/>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="16" fail="0" skip="0" id="s1" name="Create Class Tests">Create Class Tests</stat>
+<stat pass="15" fail="0" skip="0" id="s1-s1" name="invalid createClass">Create Class Tests.invalid createClass</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="valid createClass">Create Class Tests.valid createClass</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
